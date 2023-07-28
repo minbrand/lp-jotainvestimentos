@@ -5,8 +5,8 @@ if(dtlVerify >= 0) dtl = dtl.split('-')[1];
 if(xpromo == null) xpromo = 'null';
 
 $('.btnCk').each(function(){
-  if(dtl !== null) $(this).attr('href', 'https://checkout.mycheckout.com.br/checkout/631b790017ccf6278ba20cd2/' + xpromo + '-' + dtl.toUpperCase());
-  else $(this).attr('href', 'https://checkout.mycheckout.com.br/checkout/631b790017ccf6278ba20cd2/' + xpromo);
+  if(dtl !== null) $(this).attr('href', 'https://pepper.com.br/checkout/index.html?p=30132&o=28355' + xpromo + '-' + dtl.toUpperCase());
+  else $(this).attr('href', 'https://pepper.com.br/checkout/index.html?p=30132&o=28355' + xpromo);
 });
 
 function getQueryVariable(name, url) {
