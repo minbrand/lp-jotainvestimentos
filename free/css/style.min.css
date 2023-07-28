@@ -1,0 +1,550 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap");
+.noWrap {
+  white-space: nowrap;
+}
+.highlight,
+.highlight-2,
+.highlight-3 {
+  font-family: inherit;
+}
+.highlight {
+  color: #faff00;
+}
+.highlight-2 {
+  color: #0095ff;
+}
+.highlight-3 {
+  background: #6ee1fe;
+}
+.highlight-4 {
+  color: #6ee1fe;
+}
+.highlightG {
+  background: -webkit-linear-gradient(-35deg, #6ee1fe, #faff00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+}
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.hidden {
+  display: none !important;
+}
+.supportText {
+  color: #eee;
+}
+.btnDesk {
+  display: none !important;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.imagesOnText {
+  width: 100%;
+  max-width: fit-content;
+  margin-bottom: 2rem;
+}
+* {
+  color: inherit;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  margin: 0;
+  background: #0c0c0c;
+}
+a,
+b,
+u,
+i,
+span {
+  font-family: inherit;
+}
+b {
+  font-weight: 700;
+}
+u {
+  text-decoration-color: #faff00;
+  cursor: pointer;
+}
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.blocks {
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  position: relative;
+}
+.stHeader {
+  text-align: center;
+  position: relative;
+  background: #010101;
+}
+.stHeader::before,
+.stHeader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.stHeader::before {
+  width: 100%;
+  height: inherit;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+.boxInfos {
+  width: 100%;
+  color: #fff;
+}
+.imgCampaign {
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto 1.7rem;
+}
+.imgCampaign.mobile {
+  display: block;
+}
+.imgCampaign.desktop {
+  display: none;
+}
+.boxInfos small {
+  display: block;
+  margin-top: 10px;
+}
+h1,
+h2,
+h3,
+p,
+ul li,
+ol li {
+  margin: 0 auto 1.7rem;
+  font-weight: 300;
+  letter-spacing: 0.03rem;
+}
+h1 {
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.2em;
+}
+h1 span {
+  font-weight: 300;
+  font-size: 0.55em;
+  line-height: 1.2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+h2 {
+  font-size: 1.6em;
+  line-height: 1.3em;
+}
+h3 {
+  font-size: 1.35em;
+  line-height: 1.4em;
+}
+p,
+ul li,
+ol li {
+  font-size: 1em;
+  line-height: 1.35em;
+}
+.imageLW {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 2rem;
+}
+.boxFloatButton {
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  background: #222324;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+footer {
+  width: 100%;
+  background-color: #0c0c0c;
+  color: #9298ad;
+  font-weight: 300;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+footer .logoEmpiricus {
+  width: 100px;
+  margin: 0 auto 22px;
+}
+footer p {
+  max-width: 880px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.65rem;
+  line-height: 1rem;
+}
+footer p:last-child {
+  margin: 0 auto 100px;
+}
+footer p a {
+  text-decoration: underline;
+}
+@media only screen and (min-width: 400px) {
+  .imgCampaign {
+    max-width: 320px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .stHeader {
+    text-align: left;
+  }
+  .container {
+    max-width: 700px;
+  }
+  .imgCampaign {
+    max-width: 380px;
+    margin: 0;
+  }
+  .contentInfo {
+    width: calc(100% - 410px);
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .blocks {
+    padding: 3.5rem;
+  }
+  .stHeader::before {
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+  }
+  .container {
+    max-width: 880px;
+    font-size: 1.2em;
+  }
+  .imgCampaign.mobile {
+    display: none;
+  }
+  .imgCampaign.desktop {
+    display: block;
+  }
+  footer p:last-child {
+    margin: 0 auto;
+  }
+  .boxFloatButton {
+    display: none;
+  }
+  .btnDesk {
+    display: block !important;
+  }
+}
+@media only screen and (min-height: 920px) {
+  .stHeader .container {
+    min-height: 90vh;
+  }
+  .boxInfos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1100px;
+  }
+  .imgCampaign {
+    max-width: 500px;
+  }
+  .contentInfo {
+    width: calc(100% - 530px);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1340px;
+  }
+  .imgCampaign {
+    max-width: 560px;
+  }
+  .contentInfo {
+    width: calc(100% - 590px);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .container {
+    max-width: 1400px;
+  }
+  .imgCampaign {
+    max-width: 600px;
+  }
+  .contentInfo {
+    width: calc(100% - 630px);
+  }
+}
+.countdown-tab {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto 1.7rem;
+}
+.counter-sec {
+  width: 100%;
+}
+.countdown {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.countdown .countdown-amount {
+  width: calc(33.3% - 12px);
+  font-size: 2.7em;
+  font-weight: 700;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-radius: 3px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  display: block;
+}
+.countdown .countdown-amount::after {
+  content: ":";
+  color: #faff00;
+  font-size: 0.65em;
+  position: absolute;
+  top: 40%;
+  right: -13px;
+  transform: translateY(-60%);
+  display: block;
+}
+.countdown .countdown-amount:nth-child(3)::after {
+  display: none;
+}
+.countdown .countdown-amount:last-child {
+  display: none;
+  margin: 0;
+}
+.countdown .countdown-amount .countdown-period {
+  font-size: 0.3em;
+  display: block;
+  margin: 0 auto;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+}
+@media only screen and (min-width: 768px) {
+  .countdown-tab {
+    max-width: 300px;
+    margin: 0 0 2rem;
+  }
+  .countdown .countdown-amount::after {
+    font-size: 0.55em;
+    right: -13.5px;
+  }
+}
+.modalForm {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  display: none;
+}
+.modalFormOverlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modalFormContent {
+  width: calc(100% - (1rem * 2));
+  max-width: 460px;
+  height: auto;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2rem 1rem 1rem;
+  border-radius: 4px;
+  background: #fff;
+  color: #9298ad;
+  text-align: center;
+}
+.buttonCloseModal {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: calc(1rem / 2);
+  right: calc(1rem / 2);
+  cursor: pointer;
+  display: table;
+}
+.buttonCloseModal::before,
+.buttonCloseModal::after {
+  content: "";
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 100px;
+  background: #8492a8;
+  display: table;
+}
+.buttonCloseModal::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.buttonCloseModal::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.titleForm {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.35rem;
+  margin-bottom: 2rem;
+  display: table;
+}
+.boxInput {
+  width: 100%;
+  position: relative;
+  display: table;
+  margin: 0 auto 0.85rem;
+}
+.boxInput div:first-child {
+  margin: 0 auto 0.85rem;
+}
+.boxInput label {
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  display: table;
+  color: #9298ad;
+}
+.boxInput input {
+  width: 100%;
+  min-height: 45px;
+  display: table;
+  font-size: inherit;
+  font-weight: 300;
+  outline: 0;
+  border: solid 1.5px #c4cedd;
+  border-radius: 0.3rem;
+  padding: 0.3rem 0 0.3rem 0.3rem;
+  color: #9298ad;
+  background: rgba(0, 0, 0, 0);
+  overflow: visible;
+}
+.boxInput.flex {
+  display: flex;
+}
+.boxInput.flex div {
+  width: calc(50% - 0.5rem);
+}
+.boxInput input[name="phone"] {
+  padding-left: 35px;
+  background-image: url(jotainvestimentos.com.br/template-02/images/iconWhats-color.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 8px center;
+}
+.boxInput input:focus {
+  border: solid 1.5px #faff00;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.boxInput input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  box-shadow: 0 0 0px 1000px white inset;
+  background-image: url(https://jotainvestimentos.com.br/template-02/images/email-black.svg);
+}
+.checkAs {
+  position: absolute;
+  opacity: 0;
+}
+.iCheckbox {
+  display: none;
+}
+.btn-submit,
+.btOpenForm {
+  width: 100%;
+  max-width: 440px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: -0.01rem;
+  line-height: 1.35rem;
+  position: relative;
+  padding: 1.1rem 1rem 1.25rem;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.9);
+  background: linear-gradient(30deg, #faff00, #faff00);
+  cursor: pointer;
+  border-radius: 8px;
+  display: block;
+}
+.btn-submit::before,
+.btOpenForm::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(30deg, #faff00, #faff00);
+  z-index: -1;
+  filter: blur(15px);
+  opacity: 0.6;
+}
+.btn-submit:hover,
+.btOpenForm:hover {
+  background: linear-gradient(30deg, #faff00, #faff00);
+  transform: scale(1.02);
+  transition: 0.2s;
+}
+.btn-submit {
+  margin-bottom: 0.8rem;
+}
+.infoSubmit {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #9298ad;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .btn-submit,
+  .btOpenForm {
+    font-size: 1.35rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .modalFormContent {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .btOpenForm {
+    margin: 0;
+  }
+}
