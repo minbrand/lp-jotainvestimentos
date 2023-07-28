@@ -5,8 +5,8 @@ if(dtlVerify >= 0) dtl = dtl.split('-')[1];
 if(xpromo == null) xpromo = '&';
 
 $('.btnCk').each(function(){
-  if(dtl !== null) $(this).attr('href', 'https://pepper.com.br/checkout/index.html?p=30132&o=28355' + xpromo + '-' + dtl.toUpperCase());
-  else $(this).attr('href', 'https://pepper.com.br/checkout/index.html?p=30132&o=28355' + xpromo);
+  if(dtl !== null) $(this).attr('href', 'https://lastlink.com/p/C30200459/checkout-payment/' + xpromo + '-' + dtl.toUpperCase());
+  else $(this).attr('href', 'https://lastlink.com/p/C30200459/checkout-payment/' + xpromo);
 });
 
 function getQueryVariable(name, url) {
