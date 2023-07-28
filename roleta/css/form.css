@@ -1,0 +1,204 @@
+.modalForm{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10000000;
+  display: none;
+}
+
+.modalFormOverlay{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modalFormContent{
+  width: calc(100% - (var(--defaultSpace) * 2));
+  max-width: 460px;
+  height: auto;
+  position: absolute;
+  top: var(--defaultSpace);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: calc(var(--defaultSpace) * 1.8) var(--defaultSpace) var(--defaultSpace);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--optionalTextColor);
+  text-align: center;
+}
+
+.buttonCloseModal{
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: calc(var(--defaultSpace) / 2);
+  right: calc(var(--defaultSpace) / 2);
+  cursor: pointer;
+  display: table;
+}
+
+.buttonCloseModal::before, .buttonCloseModal::after{
+  content: "";
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 100px;
+  background: #8492a8;
+  display: table;
+}
+
+.buttonCloseModal::before{transform: translate(-50%, -50%) rotate(-45deg);}
+.buttonCloseModal::after{transform: translate(-50%, -50%) rotate(45deg);}
+
+.titleForm{
+  font-weight: var(--fwNormal);
+  font-size: 1.2rem;
+  line-height: 1.65rem;
+  margin-bottom: calc(var(--defaultSpace) * 1.6);
+  display: table;
+}
+
+.boxInput{
+  width: 100%;
+  position: relative;
+  display: table;
+  margin: var(--lSpace);
+}
+
+.boxInput label{
+  margin-bottom: calc(var(--defaultSpace) / 3);
+  font-size: 0.8rem;
+  display: table;
+  color: var(--optionalTextColor2);
+}
+
+.boxInput input{
+  width: 100%;
+  min-height: 45px;
+  display: table;
+  font-size: inherit;
+  font-weight: var(--fwNormal);
+  outline: 0;
+  border: solid 1.5px #c4cedd;
+  border-radius: calc(var(--defaultSpace) / 3.4);
+  padding: calc(var(--defaultSpace) / 2) 0 calc(var(--defaultSpace) / 2) calc(var(--defaultSpace) / 2);
+  color: var(--optionalTextColor);
+  background: rgba(0, 0, 0, 0.0);
+  overflow: visible;
+}
+
+.boxInput.flex{display: flex;}
+.boxInput.flex div{width: calc(50% - (var(--defaultSpace) / 3))}
+
+.boxInput input:focus{
+  border: solid 1.5px var(--mainColor);
+  box-shadow: 0px 0px 8px 0px rgba(239, 37, 78, 0.3);
+}
+
+.boxInput input:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  box-shadow: 0 0 0px 1000px white inset;
+  background-image: url(../fonts/email-black.svg);
+}
+
+.checkAs{
+  position: absolute;
+  /* top: -10000px; */
+  opacity: 0;
+}
+
+.iCheckbox{display: none;}
+
+.btn, .btn-submit{
+  width: 100%;
+  max-width: 440px;
+  min-height: 60px;
+  font-size: 1rem;
+  font-weight: var(--fwBold);
+  font-family: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  line-height: 1.35rem;
+  position: relative;
+  padding: 0.9rem var(--defaultSpace);
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(30deg, var(--btnsColor2), var(--btnsColor));
+  cursor: pointer;
+  border-radius: 8px;
+  display: block;
+}
+
+.btn::before, .btn-submit::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(30deg, var(--btnsColor2), var(--btnsColor));
+  z-index: -1;
+  filter: blur(15px);
+  opacity: 0.6;
+}
+
+.btn span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.btn-submit{margin-bottom: var(--defaultSpace);}
+
+.btn:hover, .btn-submit:hover{
+  background: linear-gradient(30deg, var(--btnsColor), var(--btnsColor2));
+  transform: scale(1.02);
+  transition: 0.2s;
+}
+
+.btnCk span{left: calc(50% + 15px);}
+
+.btn.btnCk span::after{
+  content: url(../fonts/shopping-cart.svg);
+  width: 15px;
+  position: absolute;
+  top: 55%;
+  left: -30px;
+  transform: translateY(-50%);
+  display: block;
+}
+
+.infoSubmit{
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+  color: var(--optionalTextColor);
+  text-align: center;
+}
+
+@media only screen and (min-width: 375px){
+  .btn.btnCk::after{left: calc(var(--defaultSpace) * 4.5);}
+}
+
+@media only screen and (min-width: 768px){
+  .btn.btnCk::after{left: calc(var(--defaultSpace) * 7.5);}
+}
+
+@media only screen and (min-width: 1000px){
+  .btn.btnCk::after{left: calc(var(--defaultSpace) * 8);}
+
+  .modalFormContent{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
