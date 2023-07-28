@@ -1,0 +1,47 @@
+.about{
+  background: #f9f9f9;
+  color: #111;
+  z-index: 2;
+}
+
+.boxNumbers{margin: calc(var(--defaultSpace) * 5.5) 0;}
+
+.numbers{
+  width: 100%;
+  opacity: 0;
+  transform: translate3d(-100px, 0, 0);
+  transition: 1s;
+}
+
+.numbers.anime{
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.numbers:first-child{margin-bottom: calc(var(--defaultSpace) * 3.5);}
+
+.numbers h2{
+  font-weight: var(--fwBolder);
+  margin: 0 0 calc(var(--defaultSpace) / 3);
+}
+
+.numbers p:last-child{margin: 0;}
+
+.counting{
+  font-size: 3.5rem;
+  font-weight: var(--fwBolder);
+  color: var(--secundaryColor);
+  margin: calc(var(--defaultSpace) / 2) 0;
+  display: block;
+}
+
+@media only screen and (min-width: 768px){
+  .boxNumbers.flex{align-items: flex-start;}
+  .numbers{width: calc(50% - (var(--defaultSpace) * 2));}
+  .numbers:first-child{margin-bottom: 0;}
+}
+
+@media only screen and (min-width: 1000px){
+  .boxNumbers.flex{align-items: flex-start;}
+  .boxNumbers{margin: calc(var(--defaultSpace) * 7.5) 0;}
+}

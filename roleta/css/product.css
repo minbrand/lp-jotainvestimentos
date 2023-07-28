@@ -1,0 +1,135 @@
+.product{
+  background: var(--bgDefault);
+  color: #fff;
+  z-index: 2;
+}
+
+.boxFeatures{margin: calc(var(--defaultSpace) * 3.5) 0;}
+
+.feature{margin: 0 0 calc(var(--defaultSpace) * 3.4);}
+.feature:last-child{margin: 0;}
+
+.feature img{
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: top;
+  border: solid 1px #333;
+  border-radius: 8px;
+  margin: 0 auto calc(var(--defaultSpace) * 1.4);
+  display: block;
+}
+
+.featureDescription h3{
+  margin: 0 0 calc(var(--defaultSpace) / 2.4);
+  font-weight: var(--fwBold);
+}
+
+.featureDescription p{
+  margin: 0;
+  color: var(--optionalTextColor);
+}
+
+.boxBonus{
+  width: 100%;
+  border: solid 1px #333;
+  border-radius: 8px;
+  padding: calc(var(--defaultSpace) * 1.6);
+}
+
+.boxBonus h2{margin: var(--mSpace);}
+.boxBonus input[type="checkbox"]{display: none;}
+
+.bonusDescription label{
+  display: block;
+  margin: var(--mSpace);
+  cursor: pointer;
+}
+
+.bonusDescription:last-child label{margin-bottom: 0;}
+
+.bonusDescription label h3{
+  padding-right: 30px;
+  color: #ddd;
+  margin: 0;
+  position: relative;
+}
+
+.bonusDescription label h3::before, .bonusDescription label h3::after{
+  content: "";
+  width: 2px;
+  height: 18px;
+  background: var(--mainColor);
+  position: absolute;
+  top: 20%;
+  right: 14px;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+  display: block;
+}
+
+.bonusDescription label h3::after{
+  right: 15px;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.bonusDescription div{
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.bonusDescription div p{
+  margin: var(--space);
+  color: var(--optionalTextColor);
+  position: relative;
+}
+
+.boxBonus input[type="checkbox"]:checked + .bonusDescription label{margin-bottom: calc(var(--defaultSpace) / 2);}
+.boxBonus input[type="checkbox"]:checked + .bonusDescription label h3::before{transform: translateY(-50%) rotate(90deg);}
+
+.boxBonus input[type="checkbox"]:checked + .bonusDescription div{
+  height: auto;
+  opacity: 1;
+  overflow: visible;
+  margin-bottom: calc(var(--defaultSpace) * 4);
+  padding-left: 25px;
+  position: relative;
+}
+
+.boxBonus input[type="checkbox"]:checked + .bonusDescription div::before{
+  content: "";
+  width: 2px;
+  height: calc(100% - (var(--defaultSpace) / 1.8));
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  background: var(--optionalTextColor);
+  opacity: 0.5;
+}
+
+@media only screen and (min-width: 768px){
+  .feature img{
+    max-width: 240px;
+    height: 280px;
+    margin: 0;
+  }
+
+  .featureDescription{width: calc(100% - (240px + (var(--defaultSpace) * 2.6)));}
+
+  .boxBonus{padding: calc(var(--defaultSpace) * 3);}
+
+  .bonusDescription label h3::before, .bonusDescription label h3::after{top: 40%;}
+}
+
+@media only screen and (min-width: 1280px){
+  .boxFeatures.flex, .feature.flex{align-items: flex-start;}
+  .feature{width: calc(50% - (var(--defaultSpace) * 2));}
+  .featureDescription{width: calc(100% - (240px + (var(--defaultSpace) * 1.8)));}
+
+  .featureDescription p{
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+}
