@@ -2,7 +2,7 @@ var xpromo = getQueryVariable("xpromo") || null;
 var dtl = getQueryVariable("dtl") || null;
 if(dtl !== null) var dtlVerify = dtl.indexOf('-');
 if(dtlVerify >= 0) dtl = dtl.split('-')[1];
-if(xpromo == null) xpromo = 'null';
+if(xpromo == null) xpromo = '&';
 
 $('.btnCk').each(function(){
   if(dtl !== null) $(this).attr('href', 'https://pepper.com.br/checkout/index.html?p=30132&o=28355' + xpromo + '-' + dtl.toUpperCase());
