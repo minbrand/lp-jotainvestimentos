@@ -8032,3 +8032,14 @@ BUGS:
   font-named-instance: 'Italic';
   src: url("font-files/Inter-italic.var.woff2?v=3.19") format("woff2");
 }
+
+.fontawesomeicon::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.Tiktok::before {
+ font: var(--fa-font-brands);
+  content: ' \e07b';
+}
