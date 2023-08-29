@@ -193,16 +193,16 @@
   font-family: inherit;
 }
 .highlight {
-  color: #f66;
+  color: #28ffbb;
 }
 .highlight-2 {
-  color: #8da5ff;
+  color: #ffdf1b;
 }
 .highlight-3 {
-  background: #8da5ff;
+  background: #ffdf1b;
 }
 .highlight-4 {
-  color: #8da5ff;
+  color: #ffdf1b;
 }
 .highlightG {
   background: -webkit-linear-gradient(-35deg, #8da5ff, #ff6666);
@@ -271,7 +271,7 @@
 }
 body {
   margin: 0;
-  background: #000;
+  background: #2a2a2a;
 }
 a,
 b,
