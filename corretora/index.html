@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionando...</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 40px 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .countdown {
+            font-size: 5rem;
+            font-weight: 800;
+            margin: 30px 0;
+            color: #4fc3f7;
+            text-shadow: 0 0 20px rgba(79, 195, 247, 0.7);
+            font-variant-numeric: tabular-nums;
+        }
+        
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 6px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border-top-color: #4fc3f7;
+            margin: 0 auto 30px;
+            animation: spin 1s linear infinite;
+        }
+        
+        .loading-text {
+            font-size: 1rem;
+            margin-top: 20px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .link-info {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 30px;
+            word-break: break-all;
+            font-size: 0.9rem;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .countdown { font-size: 4rem; }
+            .container { padding: 30px 20px; }
+        }
+        
+        @media (max-width: 400px) {
+            h1 { font-size: 1.7rem; }
+            .countdown { font-size: 3.5rem; }
+            p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="spinner"></div>
+        <h1>Redirecionando...</h1>
+        <p>Você será automaticamente redirecionado para a página de registro do Polarium Broker em:</p>
+        
+        <div class="countdown" id="countdown">3</div>
+        
+        <p class="loading-text">Por favor, aguarde enquanto preparamos tudo para você.</p>
+        
+        <div class="link-info">
+            <strong>Destino:</strong> https://trade.polariumbroker.com/register?aff=810368&aff_model=revenue&afftrack=telegram-interno
+        </div>
+    </div>
+
+    <script>
+        // Função para iniciar a contagem regressiva
+        function startCountdown() {
+            let seconds = 3;
+            const countdownElement = document.getElementById('countdown');
+            
+            // Atualizar o contador a cada segundo
+            const countdownInterval = setInterval(() => {
+                seconds--;
+                countdownElement.textContent = seconds;
+                
+                // Quando chegar a 0, redirecionar
+                if (seconds <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = 'https://trade.polariumbroker.com/register?aff=810368&aff_model=revenue&afftrack=telegram-interno';
+                }
+            }, 1000);
+            
+            // Redirecionamento alternativo após 3 segundos (para garantir)
+            setTimeout(() => {
+                window.location.href = 'https://trade.polariumbroker.com/register?aff=810368&aff_model=revenue&afftrack=telegram-interno';
+            }, 3000);
+        }
+        
+        // Iniciar a contagem regressiva quando a página carregar
+        document.addEventListener('DOMContentLoaded', startCountdown);
+        
+        // Redirecionamento imediato se o usuário clicar em qualquer lugar
+        document.body.addEventListener('click', function() {
+            window.location.href = 'https://trade.polariumbroker.com/register?aff=810368&aff_model=revenue&afftrack=telegram-interno';
+        });
+    </script>
+</body>
+</html>
