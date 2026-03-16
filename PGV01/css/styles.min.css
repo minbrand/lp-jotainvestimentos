@@ -202,12 +202,12 @@ body::before {
     z-index: -1;
     width: 100vw;
     height: 100vh;
-    background: #111 url("../images/bg-mob.webp") no-repeat bottom center/cover fixed
+    background: #111 url("../images/bg-mob1.jpg") no-repeat bottom center/cover fixed
 }
 
 @media only screen and (min-width: 576px) {
     body::before {
-        background-image: url("../images/bg-desk.webp")
+        background-image: url("../images/bg-desk.jpg")
     }
 }
 
