@@ -520,6 +520,32 @@ flipInY
   margin-top: 7px;
   aspect-ratio: 127.5/15.42;
 }
+
+.navBar img.logotipo-ji {
+  max-width: 120px;
+  aspect-ratio: 102/24;
+}
+
+.navBar img.logotipo-mb {
+  max-width: 120px;
+  aspect-ratio: 102/24;
+}
+
+.navBar img.logotipo-ne {
+  max-width: 120px;
+  aspect-ratio: 102/24;
+}
+
+.navBar img.logotipo-ac {
+  max-width: 120px;
+  aspect-ratio: 102/24;
+}
+
+.navBar img.logotipo-st {
+  max-width: 120px;
+  aspect-ratio: 102/24;
+}
+
 .navBar img.after_bell {
   left: 0%;
   transform-origin: top left;
