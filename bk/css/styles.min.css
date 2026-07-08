@@ -498,24 +498,28 @@ flipInY
   transform: translateX(-50%) scale(0.85);
   transition: all 0.5s ease;
 }
-.navBar img.logotipo-er {
+.navBar img.logotipo-ac {
   max-width: 120px;
   aspect-ratio: 102/24;
 }
-.navBar img.logotipo-opt {
+.navBar img.logotipo-ji {
   max-width: 105px;
   aspect-ratio: 89/24;
 }
-.navBar img.logotipo-mmk {
+.navBar img.logotipo-jc {
+  max-width: 105px;
+  aspect-ratio: 89/24;
+}
+.navBar img.logotipo-ne {
   max-width: 80px;
   aspect-ratio: 68/24;
 }
-.navBar img.logotipo-mt {
+.navBar img.logotipo-mb {
   max-width: 150px;
   margin-top: 7px;
   aspect-ratio: 127.5/15.1;
 }
-.navBar img.logotipo-sd {
+.navBar img.logotipo-st {
   max-width: 150px;
   margin-top: 7px;
   aspect-ratio: 127.5/15.42;
